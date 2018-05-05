@@ -1,0 +1,11 @@
+clc; clear;
+syms i1 i2 i3 l1 l2 l3;
+t1=[cosd(i1) -sind(i1) 0 0; sind(i1) cosd(i1) 0 0; 0 0 1 0; 0 0 0 1];
+t2=[cosd(i2) -sind(i2) 0 l1; sind(i2) cosd(i2) 0 0; 0 0 1 0; 0 0 0 1];
+t3=[cos(i3) -sin(i3) 0 l2; sin(i3) cos(i3) 0 0; 0 0 1 0; 0 0 0 1];
+t4=[1 0 0 l3; 0 1 0 0; 0 0 1 0; 0 0 0 1];
+t=t1*t2*t3*t4;
+f1(i1)=t1;
+f2(i2,l1)=t2;
+f3(i3,l2)=t3;
+f4(l3)=t4;
